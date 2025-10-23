@@ -1,0 +1,42 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:recommended"
+    ],
+    "stabilityDays": 0,
+    "hostRules": [
+      {
+        "matchHost": "github.com",
+        "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules$/"],
+        "hostType": "github-tags",
+        "enabled": false
+      }
+    ],
+    "regexManagers": [
+      {
+        "fileMatch": [
+          "(^|\/)*\\.tf$",
+          "(^|/)terragrunt\\.hcl$"
+        ],
+        "matchStrings": [
+          "source\\s*=\\s*\"git@github\\.com\\:(?<depName>BillSchenk\\/terraform-modules)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
+        ],
+        "datasourceTemplate": "github-releases",
+        "versioningTemplate": "regex:^(?:.*?\\/)?v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+        "extractVersionTemplate": "v(?<version>.*)",
+        "depNameTemplate": "{{{depName}}}//{{{pathPrefix}}}"
+      }
+    ],
+    "packageRules": [
+      {
+        "matchPackageNames": [
+          "hashicorp/terraform",
+          "terraform",
+          "gruntwork-io/terragrunt",
+          "terragrunt"
+        ],
+        "enabled": false
+      }
+    ]
+  }
+  

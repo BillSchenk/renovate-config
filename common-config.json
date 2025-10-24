@@ -4,20 +4,7 @@
       "config:recommended"
     ],
     "stabilityDays": 0,
-    "hostRules": [
-      {
-        "matchHost": "github.com",
-        "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules$/"],
-        "hostType": "github-tags",
-        "enabled": false
-      },
-      {
-        "matchHost": "github.com",
-        "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules\\/\\/.*$/"],
-        "hostType": "github-tags",
-        "enabled": false
-      }
-    ],
+    "hostRules": [],
     "regexManagers": [
       {
         "fileMatch": [
@@ -28,7 +15,7 @@
           "source\\s*=\\s*\"git@github\\.com\\:(?<depName>[^/]+\\/[^/]+)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\"",
           "source\\s*=\\s*\"git@github\\.com\\:(?<depName>[^/]+\\/[^/]+)\\.git\\?ref=(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
         ],
-        "datasourceTemplate": "github-tags",
+        "datasourceTemplate": "github-releases",
         "versioningTemplate": "regex:^(?:.*?\\/)?v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
         "extractVersionTemplate": "v(?<version>.*)",
         "depNameTemplate": "{{{depName}}}//{{{pathPrefix}}}"
@@ -44,20 +31,6 @@
         ],
         "enabled": false
       },
-      {
-        "matchPackageNames": [
-          "BillSchenk/terraform-modules"
-        ],
-        "datasources": ["github-tags"],
-        "enabled": false
-      },
-      {
-        "matchPackagePatterns": [
-          "BillSchenk/terraform-modules//.*"
-        ],
-        "datasources": ["github-tags"],
-        "enabled": false
-      }
     ]
   }
   

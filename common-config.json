@@ -5,9 +5,6 @@
     ],
     "stabilityDays": 0,
     "hostRules": [],
-    "ignoreDeps": [
-      "github.com/BillSchenk/terraform-modules"
-    ],
     "regexManagers": [
       {
         "fileMatch": [
@@ -35,9 +32,9 @@
         "enabled": false
       },
       {
-        "matchManagers": ["regex"],
-        "matchPackageNames": ["BillSchenk/terraform-modules"],
-        "ignoreDeprecated": false
+        "matchManagers": ["terragrunt"],
+        "matchDepNames": ["github.com/BillSchenk/terraform-modules"],
+        "enabled": false
       }
     ]
   }

@@ -32,9 +32,8 @@
       },
       {
         "matchPackageNames": ["BillSchenk/terraform-modules"],
-        "matchCurrentVersion": "^aws/s3_bucket/",
         "datasourceTemplate": "github-tags",
-        "extractVersionTemplate": "aws/s3_bucket/v(?<version>.*)"
+        "extractVersionTemplate": ".*/v(?<version>.*)"
       }
     ]
   }

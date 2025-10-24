@@ -29,12 +29,6 @@
           "terragrunt"
         ],
         "enabled": false
-      },
-      {
-        "matchPackageNames": ["BillSchenk/terraform-modules"],
-        "datasourceTemplate": "github-releases",
-        "extractVersionTemplate": ".*/v(?<version>.*)",
-        "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
       }
     ]
   }

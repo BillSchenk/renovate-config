@@ -5,9 +5,6 @@
     ],
     "stabilityDays": 0,
     "hostRules": [],
-    "terragrunt": {
-      "fileMatch": ["**/terragrunt-upstream.hcl"]
-    },
     "regexManagers": [
       {
         "fileMatch": [
@@ -32,6 +29,12 @@
           "gruntwork-io/terragrunt",
           "terragrunt"
         ],
+        "enabled": false
+      },
+      {
+        "description": "Disable terragrunt manager extractions for BillSchenk/terraform-modules",
+        "matchManagers": ["terragrunt"],
+        "matchPackageNames": ["BillSchenk/terraform-modules"],
         "enabled": false
       }
     ]

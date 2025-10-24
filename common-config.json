@@ -33,7 +33,7 @@
       },
       {
         "matchManagers": ["terragrunt"],
-        "matchPackageNames": ["BillSchenk/terraform-modules"],
+        "matchPackagePatterns": ["^github\\.com/BillSchenk/terraform-modules$"],
         "enabled": false
       }
     ]

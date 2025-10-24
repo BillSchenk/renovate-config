@@ -16,7 +16,6 @@
         ],
         "datasourceTemplate": "github-tags",
         "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
-        "extractVersionTemplate": ".*\\/v(?<version>.*)",
         "depNameTemplate": "{{{depName}}}"
       }
     ],
@@ -29,12 +28,6 @@
           "terragrunt"
         ],
         "enabled": false
-      },
-      {
-        "matchPackageNames": ["BillSchenk/terraform-modules"],
-        "datasourceTemplate": "github-tags",
-        "extractVersionTemplate": ".*/v(?<version>.*)",
-        "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
       }
     ]
   }

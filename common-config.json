@@ -4,7 +4,14 @@
       "config:recommended"
     ],
     "stabilityDays": 0,
-    "hostRules": [],
+    "hostRules": [
+      {
+        "matchHost": "github.com",
+        "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules$/"],
+        "hostType": "github-tags",
+        "enabled": false
+      }
+    ],
     "regexManagers": [
       {
         "fileMatch": [
@@ -12,8 +19,7 @@
           "(^|/)terragrunt\\.hcl$"
         ],
         "matchStrings": [
-          "source\\s*=\\s*\"git@github\\.com\\:(?<depName>[^/]+\\/[^/]+)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\"",
-          "source\\s*=\\s*\"git@github\\.com\\:(?<depName>[^/]+\\/[^/]+)\\.git\\?ref=(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
+          "source\\s*=\\s*\"git@github\\.com\\:(?<depName>BillSchenk\\/terraform-modules)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
         ],
         "datasourceTemplate": "github-releases",
         "versioningTemplate": "regex:^(?:.*?\\/)?v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",

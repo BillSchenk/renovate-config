@@ -5,6 +5,9 @@
     ],
     "stabilityDays": 0,
     "hostRules": [],
+    "terragrunt": {
+      "fileMatch": ["**/terragrunt-upstream.hcl"]
+    },
     "regexManagers": [
       {
         "fileMatch": [
@@ -29,11 +32,6 @@
           "gruntwork-io/terragrunt",
           "terragrunt"
         ],
-        "enabled": false
-      },
-      {
-        "matchManagers": ["terragrunt"],
-        "matchDepNames": ["github.com/BillSchenk/terraform-modules"],
         "enabled": false
       }
     ]

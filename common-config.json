@@ -16,7 +16,7 @@
         ],
         "datasourceTemplate": "github-tags",
         "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
-        "extractVersionTemplate": "^{{{pathPrefix}}}/(?<version>v.*)$",
+        "extractVersionTemplate": "^{{{pathPrefix}}}/v(?<version>.+)$",
         "depNameTemplate": "{{{depName}}}"
       }
     ],

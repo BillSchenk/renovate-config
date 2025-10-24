@@ -29,6 +29,11 @@
           "terragrunt"
         ],
         "enabled": false
+      },
+      {
+        "matchManagers": ["terragrunt"],
+        "matchPackageNames": ["BillSchenk/terraform-modules"],
+        "enabled": false
       }
     ]
   }

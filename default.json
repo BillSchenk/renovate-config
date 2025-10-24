@@ -3,6 +3,6 @@
     "description": "SchenkTech Default Renovate Configuration",
     "extends": [
       "config:recommended",
-      "local>BillSchenk/renovate-config:common-config.json"
+      "github>BillSchenk/renovate-config:common-config.json"
     ]
   }

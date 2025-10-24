@@ -10,6 +10,12 @@
         "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules$/"],
         "hostType": "github-tags",
         "enabled": false
+      },
+      {
+        "matchHost": "github.com",
+        "matchPackagePatterns": ["/^BillSchenk\\/terraform-modules\\/\\/.*$/"],
+        "hostType": "github-tags",
+        "enabled": false
       }
     ],
     "regexManagers": [
@@ -36,6 +42,20 @@
           "gruntwork-io/terragrunt",
           "terragrunt"
         ],
+        "enabled": false
+      },
+      {
+        "matchPackageNames": [
+          "BillSchenk/terraform-modules"
+        ],
+        "datasources": ["github-tags"],
+        "enabled": false
+      },
+      {
+        "matchPackagePatterns": [
+          "BillSchenk/terraform-modules//.*"
+        ],
+        "datasources": ["github-tags"],
         "enabled": false
       }
     ]

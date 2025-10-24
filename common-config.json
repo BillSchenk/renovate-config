@@ -4,6 +4,7 @@
       "config:recommended"
     ],
     "stabilityDays": 0,
+    "repositoryCache": "disabled",
     "hostRules": [],
     "regexManagers": [
       {

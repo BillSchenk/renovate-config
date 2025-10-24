@@ -33,7 +33,8 @@
       {
         "matchPackageNames": ["BillSchenk/terraform-modules"],
         "datasourceTemplate": "github-tags",
-        "extractVersionTemplate": ".*/v(?<version>.*)"
+        "extractVersionTemplate": ".*/v(?<version>.*)",
+        "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
       }
     ]
   }

@@ -14,7 +14,7 @@
         "matchStrings": [
           "source\\s*=\\s*\"git@github\\.com\\:(?<depName>BillSchenk\\/terraform-modules)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
         ],
-        "datasourceTemplate": "github-releases",
+        "datasourceTemplate": "github-tags",
         "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
         "extractVersionTemplate": ".*\\/v(?<version>.*)",
         "depNameTemplate": "{{{depName}}}"
@@ -29,6 +29,12 @@
           "terragrunt"
         ],
         "enabled": false
+      },
+      {
+        "matchPackageNames": ["BillSchenk/terraform-modules"],
+        "datasourceTemplate": "github-tags",
+        "extractVersionTemplate": ".*/v(?<version>.*)",
+        "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
       }
     ]
   }

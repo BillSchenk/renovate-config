@@ -5,9 +5,6 @@
     ],
     "stabilityDays": 0,
     "hostRules": [],
-    "ignoreDeps": [
-      "github.com/BillSchenk/terraform-modules"
-    ],
     "regexManagers": [
       {
         "fileMatch": [
@@ -32,6 +29,13 @@
           "gruntwork-io/terragrunt",
           "terragrunt"
         ],
+        "enabled": false
+      },
+      {
+        "description": "Hide terragrunt manager detections for BillSchenk/terraform-modules",
+        "matchManagers": ["terragrunt"],
+        "matchPackageNames": ["BillSchenk/terraform-modules"],
+        "matchDatasources": ["github-tags"],
         "enabled": false
       }
     ]

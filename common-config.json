@@ -21,6 +21,12 @@
         "packageNameTemplate": "{{{depName}}}"
       }
     ],
+    "terraform": {
+      "enabled": false
+    },
+    "terragrunt": {
+      "enabled": false
+    },
     "packageRules": [
       {
         "matchPackageNames": [
@@ -29,12 +35,6 @@
           "gruntwork-io/terragrunt",
           "terragrunt"
         ],
-        "enabled": false
-      },
-      {
-        "matchManagers": ["terragrunt"],
-        "matchDatasources": ["github-tags"],
-        "matchPackagePatterns": ["BillSchenk/terraform-modules"],
         "enabled": false
       }
     ]

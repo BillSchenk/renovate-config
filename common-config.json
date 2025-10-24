@@ -22,7 +22,7 @@
           "source\\s*=\\s*\"git@github\\.com\\:(?<depName>BillSchenk\\/terraform-modules)\\.git\\?ref=(?<pathPrefix>.*)\\/(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
         ],
         "datasourceTemplate": "github-releases",
-        "versioningTemplate": "regex:^(?:.*?\\/)?v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+        "versioningTemplate": "regex:^.*\\/v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
         "extractVersionTemplate": "v(?<version>.*)",
         "depNameTemplate": "{{{depName}}}//{{{pathPrefix}}}"
       }
